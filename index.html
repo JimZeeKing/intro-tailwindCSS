@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro tailwindcss</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Demo tailwindcss</h1>
+      <nav>
+        <input type="checkbox" id="mobile-menu" />
+        <label for="mobile-menu">
+          <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z" /></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" /></svg>
+        </label>
+
+        <ul>
+          <li><a href="#">Intro</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#galerie">Galerie</a></li>
+          <li><a href="#temoignages">Témoignages</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="services">
+      <section>
+        <h2>Services</h2>
+        <div>
+          <div>
+            <p>
+              Chez <strong>Compagnie .inc</strong>, nous offrons des solutions web sur mesure, allant de la création de sites vitrines et boutiques en ligne au développement d'applications web. Nous vous aidons à améliorer votre visibilité grâce à des stratégies SEO efficaces et proposons un support technique pour assurer la performance continue de vos plateformes. Faites confiance à notre
+              expertise pour accompagner la transformation digitale de votre entreprise.
+            </p>
+            <button>Communiquer avec-nous!</button>
+          </div>
+          <img src="./images/services.png" alt="Services" />
+        </div>
+      </section>
+      <section id="galerie">
+        <h2>Galerie</h2>
+        <ul>
+          <li><img src="./images/painting1.webp" alt="" /></li>
+          <li><img src="./images/painting2.webp" alt="" /></li>
+          <li><img src="./images/painting3.jpg" alt="" /></li>
+          <li><img src="./images/painting4.webp" alt="" /></li>
+          <li><img src="./images/painting5.jpg" alt="" /></li>
+          <li><img src="./images/painting6.jpg" alt="" /></li>
+          <li><img src="./images/painting7.jpg" alt="" /></li>
+          <li><img src="./images/painting8.jpg" alt="" /></li>
+        </ul>
+      </section>
+
+      <section id="temoignages">
+        <h2>Témoignages</h2>
+        <div>
+          <div>
+            <p>"Compagnie .inc a complètement transformé notre site web. Grâce à leur expertise en développement et SEO, nous avons vu une augmentation significative du trafic et des conversions. Merci beaucoup !"</p>
+            <span>- Jean Dupuis</span>
+          </div>
+          <div>
+            <p>"Leur service à la clientèle est impeccable et ils ont toujours su répondre à nos besoins avec professionnalisme. Une équipe avec laquelle il est agréable de collaborer."</p>
+            <span>- Sophie Tremblay</span>
+          </div>
+          <div>
+            <p>"Nous sommes ravis du travail réalisé par Compagnie .inc. Ils ont su créer un site web performant et facile à naviguer pour nos clients."</p>
+            <span>- Marc-André Giroux</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>&copy Timmatane - 2024</footer>
+    <script>
+      const links = document.querySelectorAll("nav ul li a");
+      links.forEach((link) => {
+        link.addEventListener("click", (argument) => {
+          document.querySelector("input:checked").checked = false;
+        });
+      });
+    </script>
+  </body>
+</html>
